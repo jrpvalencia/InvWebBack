@@ -17,7 +17,9 @@ return new class extends Migration
             $table->string("descripcion");
             $table->string("imagen");
             $table->integer("precio");
-            $table->integer("idTemporada");
+
+            $table->unsignedInteger("idTemporada");
+
             $table->timestamps();
         });
     }

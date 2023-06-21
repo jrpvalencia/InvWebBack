@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('compra_agrega', function (Blueprint $table) {
             $table->id();
-            $table->integer("idPersona");
-            $table->integer("idProducto");
+            
+            $table->unsignedInteger("idPersona");
+            $table->unsignedInteger("idProducto");
+
             $table->timestamps();
         });
     }

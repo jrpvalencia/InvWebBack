@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pqrs', function (Blueprint $table) {
             $table->id();
             $table->text("motivoPqr");
-            $table->integer("idPersona");
+            $table->unsignedInteger("idPersona");
 
             $table->timestamps();
         });

@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('tipoDocumento');
             $table->integer('documento');
             $table->integer('telefono');
-            $table->integer('idRol');
+
+            $table->unsignedBigInteger('idRol');
+            
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

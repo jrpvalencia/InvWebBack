@@ -15,7 +15,9 @@ return new class extends Migration
 
             
             $table->id();
-            $table->integer('idCompraAgrega');
+
+            $table->unsignedInteger('idCompraAgrega');
+
             $table->integer('cantidadProducto');
             $table->timestamps();
         });

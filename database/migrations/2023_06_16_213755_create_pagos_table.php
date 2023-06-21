@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->integer("idPedido");
-            $table->integer("idFormaDePago");
+            $table->unsignedInteger("idPedido");
+
+            $table->unsignedInteger("idFormaDePago");
+
             $table->timestamps();
         });
     }

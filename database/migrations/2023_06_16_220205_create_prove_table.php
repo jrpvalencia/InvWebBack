@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('prove', function (Blueprint $table) {
             $table->id();
-            $table->integer("idPersona");
-            $table->integer("idProducto");
+            $table->unsignedInteger("idPersona");
+
+            $table->unsignedInteger("idProducto");
+
             $table->date("fechaEntrega");
             $table->timestamps();
         });

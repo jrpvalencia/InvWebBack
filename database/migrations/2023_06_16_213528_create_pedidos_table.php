@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
             $table->integer("concentracionProducto");
-            $table->integer("idCarrito");
+            $table->unsignedInteger("idCarrito");
+
             $table->timestamps();
         });
     }

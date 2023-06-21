@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('devolucions', function (Blueprint $table) {
             $table->id();
             $table->text("motivo");
-            $table->integer("idPedido");
-            $table->integer("idPqr");
+            $table->unsignedInteger("idPedido");
+
+            $table->unsignedInteger("idPqr");
+
             $table->timestamps();
         });
     }
